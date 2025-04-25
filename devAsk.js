@@ -7,7 +7,7 @@ let server = require('./DevAskqr'),
     code = require('./DevAskpair');
 require('events').EventEmitter.defaultMaxListeners = 500;
 app.use('/code', code);
-app.use('/DevAskqr',async (req, res, next) => {
+app.use('/DevAskqr',server async (req, res, next) => {
 res.sendFile(__path + '/qr.html')
 })
 app.use('/DevAskpair',async (req, res, next) => {
