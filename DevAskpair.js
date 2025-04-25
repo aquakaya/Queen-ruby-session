@@ -38,7 +38,7 @@ router.get('/', async (req, res) => {
              if(!ask.authState.creds.registered) {
                 await delay(1500);
                         num = num.replace(/[^0-9]/g,'');
-                            const code = await Pair_Code_By_Gifted_Tech.requestPairingCode(num)
+                            const code = await ask.requestPairingCode(num)
                  if(!res.headersSent){
                  await res.send({code});
                      }
